@@ -4,15 +4,23 @@
 
 body {
     background-color: hsl(0, 0%, 8%);
-    padding: 3rem 1rem;
     font-size: 14px;
     color: white;
+    height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
 }
 
 .split {
         display: flex;
         flex-direction: column;
         align-items: center;
+}
+
+.flow-content--large > * + * {
+    margin-top: 2rem;
 }
 
 .flow-content > * + * {
@@ -29,7 +37,7 @@ main {
         font-family: "Inter", sans-serif;
         font-optical-sizing: auto;
         font-style: normal;
-        padding: 1.5rem 0;
+        padding: 1.5rem 1rem;
         border-radius: 10px;   
 }
 
@@ -52,12 +60,38 @@ img {
     text-align: center;
     font-weight: 600;
     background-color: hsl(0, 0%, 20%);
-    padding: 0.7rem 6rem;
+    padding: 1rem 6rem;
     border-radius: 10px;
+    transition: all 0.5s;
 }
 
 .social:hover {
     background-color:hsl(75, 94%, 57%);
     color: hsl(0, 0%, 12%);
+    cursor: pointer;
 
+}
+
+@media (max-width:416px) {
+    .social {
+        padding: 1rem 5rem;
+    }
+}
+
+@media (max-width:374px) {
+    .social {
+        padding: 1rem 4rem;
+    }
+}
+
+@media (max-width:340px) {
+    .social {
+        padding: 1rem 2.5rem;
+    }
+}
+
+@media (max-width:340px) {
+    .social, .name, .place, .user_intro {
+        font-size: 80%;
+    }
 }
